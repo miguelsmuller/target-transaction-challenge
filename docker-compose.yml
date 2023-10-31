@@ -1,0 +1,28 @@
+version: '3'
+services:
+  transaction-api:
+    container_name: transaction-api
+    build:
+      context: ./transaction-api-for-target
+    ports:
+      - "5028:5028"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - target-network
+
+  transaction-front:
+    container_name: transaction-front
+    build:
+      context: ./transaction-front-for-target
+      args:
+        - API_URL=http://localhost:5028
+    ports:
+      - "3090:80"
+    depends_on:
+      - transaction-api
+    networks:
+      - target-network
+
+networks:
+  target-network:
