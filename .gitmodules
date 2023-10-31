@@ -1,0 +1,6 @@
+[submodule "transaction-api-for-target"]
+	path = transaction-api-for-target
+	url = git@github.com:miguelsmuller/transaction-api-for-target.git
+[submodule "transaction-front-for-target"]
+	path = transaction-front-for-target
+	url = git@github.com:miguelsmuller/transaction-front-for-target.git
