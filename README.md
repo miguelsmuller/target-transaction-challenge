@@ -28,6 +28,8 @@ Para atualizar um submódulo específico a partir deste repositório principal, 
 
 ```shell
 git submodule update --remote <submodule_name>
+ou
+git submodule update --remote --recursive
 ```
 
 Isso trará as últimas mudanças do repositório _<submodule_name>_ e as incorporará no repositório principal.
